@@ -1,7 +1,7 @@
-require("dotenv").config();
 const mongoose = require("mongoose");
 
-const mongoURL = process.env.MONGO_URL;
+var mongoURL = 'mongodb+srv://booking:2002@booking.vtm6k.mongodb.net/shiongreen-orders?retryWrites=true&w=majority'
+
 
 mongoose.connect(mongoURL)
 
@@ -15,4 +15,4 @@ connection.on('connected' , ()=>{
     console.log('MongoDB connection successful')
 })
 
-module.exports = mongoose   
+module.exports = mongoose
